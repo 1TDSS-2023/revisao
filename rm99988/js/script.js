@@ -1,103 +1,80 @@
-// //console.log("hello world!");
-
-// //declarando um array de alunos
-
-// var alunos =["joao","maria","jose"];
-// //imprimir array de alunos
-// console.log(alunos);
-// //imprimir a primeira posição do array de alunos
-// console.log(alunos[0]);
-
-// //declarar um array de array de alunos
-// var alunos = [
-//     ["joao",8 ,7, 8.5],
-//     ["maria",3 ,4, 5],
-//     ["jose",4,6,7]
-// ];
-
-// //impimir um array de array de alunos
-// console.log(alunos);
-
-// //imprimir a primeira posição do array de array de alunos
-// console.log(alunos[0]);
-
-// //declarar um array de objetos
-
-//ctrl ; comenta tudo de uma vez
-
-// let alunos =[
-//     {nome:"joao", nota: 8, disciplina:"Português"},
-//     {nome:"maria", nota: 5, disciplina:"Português"},
-//     {nome:"jose", nota: 8, disciplina:"Português"},
-//     //sempre que criar objeto (nome) de um valor (joao)
-// ]
-
-// //imprimir um array de objetos
-// console.log(alunos);
-
-// //imprimir as posiçoes do array de objetos
-
-// console.log(alunos[0]["nome"]);
-// console.log(alunos[0].nome, alunos[0].nota, alunos[0].disciplina);
-
-
-// //imprimir a segunda posição do array de objetos e suas propriedades utilizando forEach 
-
-// //imprimir array de objetos e suas propriedades utilizando for e template string
-// alunos.forEach(aluno => {
-//     console.log(`${aluno.nome} - ${aluno.nota} - ${aluno.disciplina}`);
-
+// document.addEventListener("DOMContentLoaded", function () {
+//     const formulario = document.getElementById("formulario");
+//     const input = document.getElementById("Input");
+//     const listaTarefa = document.getElementById("ListaTarefa");
+  
+//     formulario.addEventListener("submit", function (event) {
+//       event.preventDefault(); // Impede o envio padrão do formulário
+  
+//       const novaTarefa = input.value;
+//       if (novaTarefa.trim() !== "") {
+//         const itemLista = document.createElement("li");
+//         itemLista.innerText = novaTarefa;
+//         listaTarefa.appendChild(itemLista);
+  
+//         input.value = ""; // Limpa o campo de entrada após adicionar a tarefa
+//       }
+//     });
 // });
 
-//declarando um array de objetos e propriedads
-// let alunos =[
-//     {nome:"joao", nota: 8, disciplina:"Português"},
-//     {nome:"maria", nota: 5, disciplina:"Português"},
-//     {nome:"jose", nota: 8, disciplina:"Português"},
-//     //sempre que criar objeto (nome) de um valor (joao)
-// ]
+//criando uma lista de tarefasa array
+let listaTarefaArray =[];
 
-// //utilizando o método PUSH para adicionar um noo objeto ao array de objetos
+//adicionando um listener ao botao de adicionar tarefa
+const botaoAdicionarTarefa  = document.querySelector("#btnaddTarefa");
 
-// alunos.push({nome:"pedro", nota:10, disciplina:"Geografia"});
+botaoAdicionarTarefa.addEventListener("click",() =>{
+//recuperar o input da tarefa
+    const inputTarefa = document.querySelector("#idTarefa");
 
-// //imprimir array de objetos
-// console.log(alunos);
+    //inserindo o valor do input no array de tarefas
+    listaTarefaArray.push(inputTarefa.value);
+    inputTarefa.value="";
 
-// //quebra de linha
-// console.log("\n");
+    const listaTarefaArrayUl = document.querySelector("lista-tarefas");
 
-//aplicando ordem alfabetica no array simples com o metodo SORT.
+    //criando um elemento list item (li)
+    let li = document.createElement("li");
 
-let alunos = ["joao","maria", "jose"];
-//aplicando metodo sort para ordenrar o array de nomes
-alunos.sort()
+    li.textContent = inputTarefa.value;
 
-console.log(alunos)
+    //adicionando o elemento li a um parentNode Ul
 
-//invertendo a ordem do array com reverse
+    listaTarefaArrayUl.appendChild(li);
 
-alunos.reverse();
 
-console.log(alunos);
 
-// removendo o ultimo elemento do array com pop
-alunos.pop();
+    //adicionando um botão para excluir a tarefa
 
-console.log(alunos);
+    let botaoApagaTarefa =  document.createElement("button");
 
-//adicionando um novo elemento ao array com unshift
 
-alunos.unshift("pedro");
+//adicionando um texto ao botao de apagar tarefas
 
-console.log(alunos);
+    botaoApagaTarefa.textContent = "x";
 
-//removendo o primeiro elemento do array com shift
 
-alunos.shift();
-console.log(alunos);
+    //adicionando uma calasse ao botao de apagar tarefa
 
-//alterar os elementos do array com splice
-alunos.splice(1,1,"joaquina");
+    botaoApagaTarefa.setAttribute("class","exclui");
 
-console.log(alunos);
+//adicionando o bota oao elemento li
+
+    li.appendChild(botaoApagaTarefa);
+
+
+//evento sera disparado ao clicarmos em 'x' ou seja a tarefa sera excluida do array
+    botaoApagaTarefa.addEventListener('click',(evento)=>{
+        listaTarefaArray.forEach((tarefa, index) =>{
+            if(evento.target.parentNode.value == tarefa)
+    });
+
+    });
+
+    inputTarefa.value ="";
+
+
+
+
+});
+
