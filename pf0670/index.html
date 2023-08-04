@@ -23,12 +23,15 @@ incluir novas tarefas e excluir as tarefas desejadas. Ex: PUSH, POP, SHIFT, UNSH
 SPLICE. -->
 
 <div>
-    <form action="#" method="get" onsubmit="return false">
+    <form action="#" method="get">
         <fieldset>
             <legend>Nova Tarefa</legend>
             <div>
-                <label for="">Adicione sua tarefa:</label>
+                <label for="idTarefa">Adicione sua tarefa:</label>
                 <input type="text" name="tarefa" id="idTarefa" placeholder="Digite sua Tarefa"> 
+            </div>
+            <div>
+                <button type="submit" value="adicionar" id="btnAddTarefa">Adicionar</button>
             </div>
         </fieldset>
     </form>
