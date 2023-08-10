@@ -190,4 +190,45 @@
 // const logado = usuarios.filter(u => u.usuario == "João" && u.senha == 123456);
 // console.log(logado);
 
+// const numbers = [1, 2, 3, 4, 5, 6];
+//  const soma = numbers.reduce((acumulado, atual) => acumulado + atual);
+//  console.log(soma);
+// //Quebra de linha
+// console.log("\n");
 
+// const filaBrinquedo = [
+//     {nome: "João", altura: 1.5, idade: 12},
+//     {nome: "Maria", altura: 1.7, idade: 11},
+//     {nome: "José", altura: 1.6, idade: 13},
+//     {nome: "Pedro", altura: 1.4, idade: 10},
+//     {nome: "Joaquina", altura: 1.8, idade: 12}
+// ]
+
+// const todaFilaPode = filaBrinquedo.every(pessoas => pessoas.altura >= 1.6);
+// console.log(todaFilaPode);
+
+// const passeio = [
+//     {nome: "João", altura: 1.5, idade: 12},
+//     {nome: "Maria", altura: 1.7, idade: 11},
+//     {nome: "José", altura: 1.6, idade: 13},
+//     {nome: "Pedro", altura: 1.4, idade: 10},
+//     {nome: "Joaquina", altura: 1.8, idade: 12}
+// ]
+// const verificaIdade = passeio.some(pessoas => pessoas.idade >= 14);
+// console.log(verificaIdade);
+
+// const candidatos = [
+//     {nome: "João", nota: 65},
+//     {nome: "Rita", nota: 55},
+//     {nome: "Sérgio", nota: 80},
+//     {nome: "Valter", nota: 70}
+// ]
+
+// const selecionado = candidatos.find( cand => cand.nota >= 70);
+// console.log(`${selecionado.nome} teve a nota ${selecionado.nota}!`);
+
+
+const convidados = ["prof-Allen", "Lucass","Gilbert","prof-Luis","prof-Alexandre"]
+
+const profsConvidados = convidados.filter(convid => convid.includes("prof"));
+console.log(profsConvidados);
