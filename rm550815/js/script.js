@@ -119,3 +119,55 @@
 // const logado = usuarios.filter(usuario => usuario.nome == "João" && usuario.senha == 123);
 // console.log(logado);
 
+// const numeros = [4, 5, 8, 6, 7]
+
+// const soma = numeros.reduce((acumulador, numero) => acumulador + numero);
+// console.log(soma);
+
+// //Quebrar linha
+// console.log("\n");
+
+// const vendedores = [
+//     {nome: "João", vendas: 1000},
+//     {nome: "Maria", vendas: 2000},
+//     {nome: "José", vendas: 3000}
+// ];
+
+// function somaVendas(acumulador, vendedor){
+//     return {vendas: acumulador.vendas + vendedor.vendas};
+// }
+// const totalVendas = vendedores.reduce(somaVendas, {vendas: 0});
+// console.log(totalVendas);
+
+// const filaBrinquedo = [
+//     {nome: "Maria", altura: 1.5, idade : 12},
+//     {nome: "João", altura: 1.7, idade : 11},
+//     {nome: "José", altura: 1.6, idade : 13},
+//     {nome: "Pedro", altura: 1.4, idade : 10},
+//     {nome: "Ana", altura: 1.8, idade : 12}
+// ];
+
+// const todaFilaPode = filaBrinquedo.every(pessoa => pessoa.altura >= 1.3 && pessoa.idade >= 11);
+// console.log(todaFilaPode);
+
+// const passeio = [
+//     {nome: "Maria", altura: 1.5, idade : 12},
+//     {nome: "João", altura: 1.7, idade : 11},
+//     {nome: "José", altura: 1.6, idade : 13},
+//     {nome: "Pedro", altura: 1.4, idade : 10},
+//     {nome: "Ana", altura: 1.8, idade : 12}
+
+// ];
+
+// const verificaIdade = passeio.some(pessoa => pessoa.idade >= 12);
+// console.log(verificaIdade);
+
+const candidatos = [
+    {nome: "João", nota: 65},
+    {nome: "Maria", nota: 81},
+    {nome: "José", nota: 49},
+    {nome: "Pedro", nota: 55}
+];
+
+const aprovados = candidatos.find(candidato => candidato.nota >= 70);
+console.log(`${aprovados.nome} foi aprovado com nota ${aprovados.nota}`);
