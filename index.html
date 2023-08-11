@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jose Carnauba | RM552367</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/scripts.js" defer></script>
+</head>
+<body>
+    <h2>Lista de Tarefas</h2>
+    
+<!-- Adicionando Tarefas Novas -->
+<div>
+    <form id="form-tarefa">
+        <h4>Adicione a Tarefa:</h4>
+        <input type="text" id="inpt-nome-tarefa" placeholder="Tarefa">
+        <input type="text" id="inpt-desc-tarefa" placeholder="Descrição">
+        <input type="text" id="inpt-aut-tarefa" placeholder="Autor">
+        <input type="text" id="inpt-dep-tarefa" placeholder="Departamento">
+        <!-- btn para adicionar importância -->
+        <select id="inpt-prioridade-tarefa">
+            <option value="alta">Alta</option>
+            <option value="média">Média</option>
+            <option value="média">Baixa</option>
+        </select>
+        <button type="submit">Nova tarefa</button>
+        <!-- btn para filtrar as tarefas -->
+        <h4>Prioridade:</h4>
+        <select id="select-filtro-importância">
+            <option value="todas">Todas</option>
+            <option value="alta">Alta</option>
+            <option value="media">Média</option>
+            <option value="baixa">Baixa</option>
+        </select>
+        <button type="button" id="btn-filtrar">Filtro</button>
+    </form>
+</div>
+
+</body>
+
+</html>
