@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Leonardo Oliveira Esparza - rm550200</title>
+        <script src="./js/script.js" defer></script>
+    </head>
+    <body>
+        <h1>Lista de Tarefas</h1>
+
+        <div>
+
+            <form action="#" method="get">
+                <fieldset>
+                    <legend>Criar Tarefa:</legend>
+
+                    <div>
+                        <label for="id-tarefa">Adicione uma Tarefa</label>
+                        <input type="text" name="tarefa" id="id-tarefa" placeholder="Nome da tarefa">
+                        <input type="text" name="descricao" id="id-descricao" placeholder="Descrição da tarefa">
+                        <input type="text" name="autor" id="id-autor" placeholder="Autor">
+                        <input type="text" name="departamento" id="id-departamento" placeholder="Departamento ">
+                        <!-- seleção da importancia da tarefa -->
+                        <select id="id-importancia-tarefa">
+                            <option value="alta">Alta</option>
+                            <option value="media">Média</option>
+                            <option value="baixa">Baixa</option>
+                        </select>
+                        <!-- adição de valor e duração da tarefa -->
+                        <input type="number" name="valor" id="id-valor" placeholder="Valor da tarefa">
+                        <input type="number" name="duracao" id="id-duracao" placeholder="Duração da tarefa">
+
+                        <!-- Botão para adicionar tarefa -->
+                        <button type="submit">Adicionar Tarefa</button>
+                    
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+
+    <!-- Tabela de tarefas -->
+    <table id="id-tabela-tarefas">
+        <h2>Tabela de Tarefas: </h2>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Descrição</th>
+                <th>Autor</th>
+                <th>Departamento</th>
+                <th>Importancia</th>
+                <th>Valor</th>
+                <th>Duração</th>
+                <th>Remover</th>
+            </tr>
+        </thead>
+        <tbody id="id-tabela-body"></tbody>
+    </table>
+    </body>
+</html>
